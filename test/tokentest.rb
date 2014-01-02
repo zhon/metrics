@@ -3,7 +3,7 @@
 #  Copyright (c) XPUtah (Jeff Grover and Zhon Johansen) 2005.  All rights reserved.
 #
 
-require 'test/unit'
+require 'helper'
 
 require 'token'
 

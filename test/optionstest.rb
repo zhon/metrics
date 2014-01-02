@@ -3,9 +3,9 @@
 #  Copyright (c) XPUtah (Jeff Grover and Zhon Johansen) 2005.  All rights reserved.
 #
 
-require 'options'
+require 'helper'
 
-require 'test/unit'
+require 'options'
 require 'stringio'
 
 class OptionsTest < Test::Unit::TestCase

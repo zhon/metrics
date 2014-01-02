@@ -3,8 +3,7 @@
 #  C/C++/Java (and C#?) Extreme Code Metrics program
 #  Copyright (c) XPUtah (Jeff Grover and Zhon Johansen) 2000-2002.  All rights reserved.
 #
-
-require 'test/unit'
+require 'helper'
 
 require 'literalreporter'
 require 'fileparser'

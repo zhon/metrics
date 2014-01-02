@@ -4,9 +4,9 @@
 #
 
 
-require_relative 'test/unit'
+require 'helper'
 
-require_relative 'conditionalcollector'
+require 'conditionalcollector'
 
 
 class ConditionalCollectorTest < Test::Unit::TestCase

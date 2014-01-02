@@ -2,10 +2,10 @@
 #  C/C++/Java (and C#?) Extreme Code Metrics program
 #  Copyright (c) XPUtah (Jeff Grover and Zhon Johansen) 2005.  All rights reserved.
 #
+require 'helper'
 
 require 'linecountcollector'
 
-require 'test/unit'
 
 class LineCountCollectorTest < Test::Unit::TestCase
   # TODO write better tests

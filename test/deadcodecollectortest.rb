@@ -3,10 +3,10 @@
 #  Copyright (c) XPUtah (Jeff Grover and Zhon Johansen) 2005.  All rights reserved.
 #
 
-require_relative 'test/unit'
+require 'helper'
 
-require_relative 'deadcodecollector'
-require_relative 'mockfileparser'
+require 'deadcodecollector'
+require 'mockfileparser'
 
 
 class DeadCodeCollectorTest < Test::Unit::TestCase

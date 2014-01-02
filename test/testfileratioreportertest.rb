@@ -3,11 +3,11 @@
 #  Copyright (c) XPUtah (Jeff Grover and Zhon Johansen) 2000-2002.  All rights reserved.
 #
 
+require 'helper'
 
 require 'testfileratioreporter'
 
 require 'testfileratiocollector'
-require 'test/unit'
 
 class TestFileRatioReporterTest < Test::Unit::TestCase
   attr_reader :test_dir, :reporter

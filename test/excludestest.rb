@@ -6,7 +6,7 @@
 
 
 
-require 'test/unit'
+require 'helper'
 
 require 'excludes'
 

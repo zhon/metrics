@@ -4,7 +4,7 @@
 #
 
 
-require 'test/unit'
+require 'helper'
 require 'duplicatecollector'
 
 

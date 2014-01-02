@@ -4,11 +4,9 @@
 #  Copyright (c) XPUtah (Jeff Grover and Zhon Johansen) 2000-2002.  All rights reserved.
 #
 
+require 'helper'
 
 require 'fileparser'
-
-require 'test/unit'
-
 
 
 class FileParserTest < Test::Unit::TestCase

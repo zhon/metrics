@@ -4,11 +4,11 @@
 #
 
 
-require_relative 'test/unit'
+require 'helper'
 
-require_relative 'deadcodereporter'
-require_relative 'deadcodecollector'
-require_relative 'mockfileparser'
+require 'deadcodereporter'
+require 'deadcodecollector'
+require 'mockfileparser'
 
 
 class DeadCodeReporterTest < Test::Unit::TestCase

@@ -2,11 +2,10 @@
 #  C/C++/Java (and C#?) Extreme Code Metrics program
 #  Copyright (c) XPUtah (Jeff Grover and Zhon Johansen) 2005.  All rights reserved.
 #
-
+require 'helper'
 
 require 'literalcollector'
 
-require 'test/unit'
 
 class LiteralCollectorTest < Test::Unit::TestCase
   def test_all

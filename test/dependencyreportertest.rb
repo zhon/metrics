@@ -5,11 +5,11 @@
 #
 
 
+require 'helper'
 
-require_relative 'dependencyreporter'
+require 'dependencyreporter'
 
-require_relative 'test/unit'
-require_relative 'dependencycollector'
+require 'dependencycollector'
 
 
 class DependencyReporterTest < Test::Unit::TestCase

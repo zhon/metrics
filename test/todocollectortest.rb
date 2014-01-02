@@ -3,10 +3,9 @@
 #  Copyright (c) XPUtah (Jeff Grover and Zhon Johansen) 2005.  All rights reserved.
 #
 
+require 'helper'
+
 require 'todocollector'
-
-require 'test/unit'
-
 require 'comment'
 
 class TodoCollectorTest < Test::Unit::TestCase

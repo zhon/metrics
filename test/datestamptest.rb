@@ -5,9 +5,9 @@
 #
 
 
-require_relative 'test/unit'
+require 'helper'
 
-require_relative 'datestamp'
+require 'datestamp'
 
 
 class DatestampTest < Test::Unit::TestCase

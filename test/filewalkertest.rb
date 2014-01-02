@@ -2,10 +2,9 @@
 #  C/C++/Java (and C#?) Extreme Code Metrics program
 #  Copyright (c) XPUtah (Jeff Grover and Zhon Johansen) 2005.  All rights reserved.
 #
+require 'helper'
 
 require 'filewalker'
-
-require 'test/unit'
 
 require 'tmpdir'
 require 'find'

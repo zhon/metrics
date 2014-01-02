@@ -3,11 +3,11 @@
 #  Copyright (c) XPUtah (Jeff Grover and Zhon Johansen) 2005.  All rights reserved.
 #
 
+require 'helper'
 
-require_relative 'dependencycollector'
+require 'dependencycollector'
 
-require_relative 'test/unit'
-require_relative 'dependencyreportertest'
+require 'dependencyreportertest'
 
 class DependencyCollectorTest < Test::Unit::TestCase
   def setup

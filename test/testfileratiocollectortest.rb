@@ -3,10 +3,10 @@
 #  Copyright (c) XPUtah (Jeff Grover and Zhon Johansen) 2005.  All rights reserved.
 #
 
+require 'helper'
 
 require 'testfileratiocollector'
 
-require 'test/unit'
 
 class TestFileRatioCollectorTest < Test::Unit::TestCase
   def test_all
