@@ -12,8 +12,8 @@ class OptionsTest < Test::Unit::TestCase
   def test_usage_from_help
     my_output, tmp_output = capture_output
 
-    assert_raise(SystemExit) { Options.new(['-h']) }
-    assert_raise(SystemExit) { Options.new(['--hel']) }
+    assert_raises(SystemExit) { Options.new(['-h']) }
+    assert_raises(SystemExit) { Options.new(['--hel']) }
     assert_match /^Usage: /, my_output.string
   ensure
     restore_output(tmp_output)
@@ -22,7 +22,7 @@ class OptionsTest < Test::Unit::TestCase
   def test_usage_from_error
     my_output, tmp_output = capture_output
 
-    assert_raise(SystemExit) { Options.new([]) }
+    assert_raises(SystemExit) { Options.new([]) }
     assert_match /^Error: /, my_output.string
   ensure
     restore_output(tmp_output)
@@ -31,7 +31,7 @@ class OptionsTest < Test::Unit::TestCase
   def test_missing_argument
     my_output, tmp_output = capture_output
 
-    assert_raise(SystemExit) { Options.new(['-v', '-a' 'path']) }
+    assert_raises(SystemExit) { Options.new(['-v', '-a' 'path']) }
     assert_match /^Error:.*path/, my_output.string
   ensure
     restore_output(tmp_output)
@@ -40,7 +40,7 @@ class OptionsTest < Test::Unit::TestCase
   def test_no_metrics_selected
     my_output, tmp_output = capture_output
 
-    assert_raise(SystemExit) { Options.new(['only/a/path']) }
+    assert_raises(SystemExit) { Options.new(['only/a/path']) }
     assert_match /^Error: no metrics/, my_output.string
   ensure
     restore_output(tmp_output)
@@ -141,12 +141,12 @@ class OptionsTest < Test::Unit::TestCase
         - dir
         - file.java
       include: 
-        - *.java
-        - *.cpp
-        - *.cc
-        - *.c
-        - *.h
-        - *.hpp
+        - "*.java"
+        - "*.cpp"
+        - "*.cc"
+        - "*.c"
+        - "*.h"
+        - "*.hpp"
       EOD
     end
 
@@ -188,7 +188,7 @@ class OptionsTest < Test::Unit::TestCase
     end
 
     options = Options.new(command_line)
-    assert_not_equal [], options.include_globs
+    refute_equal [], options.include_globs
     assert options.include_globs.include?('*.java')
   end
 

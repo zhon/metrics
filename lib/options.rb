@@ -44,9 +44,9 @@ private
       opts.on('-d', '--duplication',
               'Find duplicate code.') { @duplication=true }
       opts.on('-f', '--option-file FILE', String,
-              'FILE contains program options') { |@options_filename| }
+              'FILE contains program options') { |item| @options_filename = item }
       opts.on('-g', '--gnuplot PATH', String,
-              'Produce gnuplot output file to PATH') { |@gnuplot| }
+              'Produce gnuplot output file to PATH') { |item| @gnuplot = item }
       opts.on('-i', '--includes',
              'Analyze dependencies for quanitity and cycles.') { @dependencies=true }
       opts.on('-l', '--line-count',
@@ -79,7 +79,7 @@ private
 
   def inialize_yaml_options
     return unless @options_filename
-    yaml_file = File.new(@options_filename) 
+    yaml_file = File.new(@options_filename)
     obj = YAML::load(yaml_file)
     @exclude_globs = obj['exclude'] if obj['exclude']
     load_include_globs(obj)
