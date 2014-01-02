@@ -33,12 +33,7 @@ class Token
 
   def Token.convert_symbol_to_valid_class_name(symbol)
     name = symbol.to_s
-    parts = name.split('_')
-    parts.each do |item| 
-      item.capitalize! 
-    end
-    name = parts.to_s
-    name
+    name.split('_').map {|item| item.capitalize! }.join
   end
   
   def initialize(line_num, type, value=type)

@@ -13,7 +13,7 @@ class TokenTest < Test::Unit::TestCase
   end
 
   def test_adding_const_raise_exception_if_class_doesnt_exist
-    assert_raise(RuntimeError) { Token::BLAH }
+    assert_raises(RuntimeError) { Token::BLAH }
   end
 
   def test_const_to_object_mapping
