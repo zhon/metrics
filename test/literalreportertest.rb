@@ -6,6 +6,7 @@
 require 'helper'
 
 require 'literalreporter'
+require 'literalcollector'
 require 'fileparser'
 
 class LiteralReporterTest < Test::Unit::TestCase
@@ -53,9 +54,9 @@ The literal 'Hello again' occurs 2 total times in
 
     DATA
 
-    assert_match(/'Hello world' occurs 4.*filename2.* 1 2.*filename.* 1 2/m, 
+    assert_match(/'Hello world' occurs 4.*filename.* 1 2.*filename2.* 1 2/m, 
       reporter.details(50))
-    assert_match(/'Hello again' occurs 2.*filename2.* 2.*filename.* 2/m, 
+    assert_match(/'Hello again' occurs 2.*filename.* 2.*filename2.* 2/m, 
       reporter.details(50))
     assert_match(/'c' occurs 2/, reporter.details(50))
     assert_match(/'-3.1415' occurs 2/, reporter.details(50))
@@ -73,11 +74,10 @@ The literal 'Hello again' occurs 2 total times in
 Top 1 Duplicated Constants:
 
 The literal 'Hello world' occurs 4 total times in
-    filename2 at line(s) 1 2
     filename at line(s) 1 2
+    filename2 at line(s) 1 2
 
     DATA
-
     assert_equal expected, reporter.details(1)
   end
 

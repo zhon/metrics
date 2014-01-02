@@ -28,11 +28,11 @@ class ConditionalReporterTest < Test::Unit::TestCase
 
 Files With Most Conditionals:
 
+   28 foo.c
    28 bar.c
     EOD
 
-    p @reporter.details(2)
-    assert_equal expected, @reporter.details(1)
+    assert_equal expected, @reporter.details(2)
   end
 
   def result

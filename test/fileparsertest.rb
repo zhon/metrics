@@ -441,16 +441,16 @@ class FileParserTest < Test::Unit::TestCase
             }
       EOD
     )
-  
-    assert_not_nil parser.functions['shouldgetthisfunction']
+
+    refute_nil parser.functions['shouldgetthisfunction']
     assert_equal 1, parser.functions['purevirtualfunction']['declaration']
   end
-  
+
   def test_functions_with_no_calls_or_declarations
     parser = initialize_length(
       <<-EOD
       int func_nocalls() { stuff(); }
-      
+
       int main() {
         func_nodef();
       }  
