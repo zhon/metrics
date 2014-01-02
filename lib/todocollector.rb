@@ -14,7 +14,7 @@ class TodoCollector
 
   def collect(file_name, file_parser)
     file_parser.comments.each do |item|
-      if item.comment.grep(@todo).length > 0
+      if item.comment.scan(@todo).length > 0
         @details[file_name] ||= []
         @details[file_name].push(item.to_a)
         @total += 1

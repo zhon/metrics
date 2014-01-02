@@ -5,8 +5,12 @@
 
 require 'helper'
 
-
 require 'todoreporter'
+
+require 'comment'
+require 'comments'
+require 'mockfileparser'
+require 'todocollector'
 
 class TodoReporterTest < Test::Unit::TestCase
   attr_reader :reporter, :file_parser
@@ -41,7 +45,7 @@ class TodoReporterTest < Test::Unit::TestCase
   end
 
   def test_details
-    assert_match(/filename1.*2 3/, reporter.details(20))
+    assert_match(/filename1: \["2 ", "3/, reporter.details(20))
   end
 
   def test_details_are_sorted
@@ -49,6 +53,6 @@ class TodoReporterTest < Test::Unit::TestCase
   end
 
   def test_details_only_report_up_to_max
-    assert_no_match(/filename3/, reporter.details(2))
+    refute_match(/filename3/, reporter.details(2))
   end
 end

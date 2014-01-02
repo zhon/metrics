@@ -268,7 +268,7 @@ class TokenizerTest < Test::Unit::TestCase
       /*
       EOD
     )
-    assert_raise(RuntimeError) { tok.next }
+    assert_raises(RuntimeError) { tok.next }
   end
 
   def test_blank_lines 

@@ -3,6 +3,8 @@
 #  Copyright (c) XPUtah (Jeff Grover and Zhon Johansen) 2000-2005.  All rights reserved.
 #
 
+require 'reporter'
+
 class TodoReporter < Reporter
   def initialize(collector)
     @total_comments = collector.result[:TOTAL_COMMENTS]
@@ -23,7 +25,7 @@ TODO Summary:
 
   def details(maximum)
     report = "\n\nTop #{maximum} Files with TODOs:\n"
-    
+
     count = 0
     @totals.sort{ |a,b| b[1].length <=> a[1].length }.each do |key,value|
       break if count >= maximum
